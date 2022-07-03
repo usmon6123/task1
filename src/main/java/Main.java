@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
@@ -20,7 +21,7 @@ public class Main {
 //        System.out.println(task2(5));
 
 
-        System.out.println(task3("dasturchi"));
+        System.out.println(task3("hello"));
 
     }
 
@@ -48,68 +49,38 @@ public class Main {
 
 
     public static String task3(String str) {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("a","t");
+        map.put("b","c");
+        map.put("c","d");
+        map.put("d","o");
+        map.put("e","p");
+        map.put("f","y");
+        map.put("g","z");
+        map.put("h","e");
+        map.put("i","f");
+        map.put("j","o");
+        map.put("k","p");
+        map.put("l","a");
+        map.put("m","b");
+        map.put("n","k");
+        map.put("o","l");
+        map.put("p","o");
+        map.put("q","p");
+        map.put("r","s");
+        map.put("s","t");
+        map.put("t","e");
+        map.put("u","f");
+        map.put("v","y");
+        map.put("x","i");
+        map.put("y","l");
+        map.put("z","m");
         StringBuilder newStr = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {
-            newStr.append(encodeStr(str.substring(i, i + 1)));
+            newStr.append(map.get(str.substring(i, i + 1)));
         }
         return String.valueOf(newStr);
 
     }
 
-    private static String encodeStr(String s) {
-        switch (s) {
-            case "a":
-                return "t";
-            case "b":
-                return "c";
-            case "c":
-                return "d";
-            case "d":
-                return "o";
-            case "e":
-                return "p";
-            case "f":
-                return "y";
-            case "g":
-                return "z";
-            case "h":
-                return "e";
-            case "i":
-                return "f";
-            case "j":
-                return "o";
-            case "k":
-                return "p";
-            case "l":
-                return "a";
-            case "m":
-                return "b";
-            case "n":
-                return "k";
-            case "o":
-                return "l";
-            case "p":
-                return "o";
-            case "q":
-                return "p";
-            case "r":
-                return "s";
-            case "s":
-                return "t";
-            case "t":
-                return "e";
-            case "u":
-                return "f";
-            case "v":
-                return "y";
-            case "x":
-                return "i";
-            case "y":
-                return "l";
-            case "z":
-                return "m";
-        }
-
-        return s;
-    }
 }
